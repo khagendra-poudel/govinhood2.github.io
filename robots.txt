@@ -1,0 +1,21 @@
+# robots.txt for govinhood.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://govinhood.github.io/sitemap.xml
+
+# Disallow system and development files
+Disallow: /__MACOSX/
+Disallow: /bat/
+Disallow: /*.php$
+
+# Allow all images
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /fonts/
+
+# Crawl-delay (optional, adjust if needed)
+# Crawl-delay: 1
