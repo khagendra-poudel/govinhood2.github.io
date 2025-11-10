@@ -27,65 +27,11 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="css/stuck.css">
 		<link rel="stylesheet" href="css/owl.carousel.css">
-		<link rel="stylesheet" href="css/form.css">
 		<link rel="stylesheet" href="css/touchTouch.css">
 		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery-migrate-1.1.1.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/superfish.js" defer></script>
-		<script src="js/jquery.equalheights.js" defer></script>
-		<script src="js/jquery.mobilemenu.js" defer></script>
-		<script src="js/jquery.easing.1.3.js" defer></script>
-		<script src="js/tmStickUp.js" defer></script>
-		<script src="js/jquery.ui.totop.js" defer></script>
-		<script src="js/touchTouch.jquery.js" defer></script>
-		<script src="js/owl.carousel.js" defer></script>
-		<script src="js/sForm.js" defer></script>
-		<script src="js/camera.js" defer></script>
-		<!--[if (gt IE 9)|!(IE)]><!-->
-		<script src="js/jquery.mobile.customized.min.js"></script>
-		<!--<![endif]-->
-		<script>
-		$(document).ready(function(){
-			jQuery('#camera_wrap').camera({
-				loader: false,
-				pagination: false ,
-				minHeight: '200',
-				thumbnails: false,
-				height: '39,0625%',
-				caption: true,
-				navigation: true,
-				fx: 'mosaic'
-			});
-			var owl = $("#owl");
-			owl.owlCarousel({
-				items : 7, //10 items above 1000px browser width
-				itemsDesktop : [995,5], //5 items between 1000px and 901px
-				itemsDesktopSmall : [767, 3], // betweem 900px and 601px
-				itemsTablet: [700, 3], //2 items between 600 and 0
-				itemsMobile : [479, 2], // itemsMobile disabled - inherit from itemsTablet option
-				navigation : true,
-			});
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			$('#stuck_container').tmStickUp({});
-			$('.gallery a.gal_item').touchTouch();
-		});
-		</script>
-
-		<!--[if lt IE 8]>
-		<div style=' clear: both; text-align:center; position: relative;'>
-			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-			</a>
-		</div>
-		<![endif]-->
-		<!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<link rel="stylesheet" media="screen" href="css/ie.css">
-		<![endif]-->
-		
+		<script src="js/theme.js" defer></script>
 	</head>
 	<body class="page1" id="top">
 <!--==============================header=================================-->
@@ -107,6 +53,7 @@
 										<li><a href="index-2.html">About me</a></li>
 										<li><a href="index-3.html">Blog</a></li>
 										<li><a href="index-4.html">Contacts</a></li>
+										<li><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode"><span class="fa fa-moon-o" aria-hidden="true"></span><span class="label">Dark</span></button></li>
 									</ul>
 								</nav>
 								<div class="clear"></div>
@@ -117,33 +64,49 @@
 			</div>
 		</header>
 		<div class="main">
-			<div class="slider_wrapper">
-				<div id="camera_wrap" class="">
-					<div data-src="images/img/img(12)-001.jpg">
-						<div class="caption fadeIn">
-							<div class="title">Nature</div>
-							<p>Nature photography is a widwe range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures.</p>
-							<p>Nature phorography tends to put a stronger emphasis on the aesthetic value of the photo than other photography genres, such as photojournalism  and documentry photography.</p>
-							<a href="#">Learn More</a>
+			<div class="hero-carousel">
+				<div class="carousel-container">
+					<div class="carousel-slide active">
+						<img src="images/img/img(12)-001.jpg" alt="Nature Photography">
+						<div class="carousel-caption">
+							<div class="caption-content">
+								<h2>Nature</h2>
+								<p>Nature photography is a wide range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures.</p>
+								<p>Nature photography tends to put a stronger emphasis on the aesthetic value of the photo than other photography genres, such as photojournalism and documentary photography.</p>
+							</div>
 						</div>
 					</div>
-					<div data-src="images/img/img(57).jpg">
-						<div class="caption fadeIn">
-							<div class="title">Street</div>
-							<p>Street photography sometimes called as candid photography, is photography conducted for art or enquiry that features unmediated chance encounters and random incidents within public places.</p>
-							<p>Although there is difference between street and candid photography,street photography does not necessitate the presence of a street or even the urban environment. Though people usually feature directly, street photography might be absent of people and can be of an object or environment.</p>
-							<a href="#">Learn More</a>
+					<div class="carousel-slide">
+						<img src="images/img/img(57).jpg" alt="Street Photography">
+						<div class="carousel-caption">
+							<div class="caption-content">
+								<h2>Street</h2>
+								<p>Street photography, sometimes called candid photography, is photography conducted for art or enquiry that features unmediated chance encounters and random incidents within public places.</p>
+								<p>Although there is a difference between street and candid photography, street photography does not necessitate the presence of a street or even the urban environment.</p>
+							</div>
 						</div>
 					</div>
-					<div data-src="images/img/img(4)-001.jpg">
-						<div class="caption fadeIn">
-							<div class="title">Heritage</div>
-							<p>The photography of cultural heritage is a necessary part of long term preservation of cultural heritage. While physical conditions of objects will change over time, imaging serves as a way to document and represent heritage in a moment in time of the lige of the item. </p>
-							<p>In addition to preservation and conservation related concerns, imaging can also serve to enhance research and study of cultural heritage.</p>
-							<a href="#">Learn More</a>
+					<div class="carousel-slide">
+						<img src="images/img/img(4)-001.jpg" alt="Heritage Photography">
+						<div class="carousel-caption">
+							<div class="caption-content">
+								<h2>Heritage</h2>
+								<p>The photography of cultural heritage is a necessary part of long-term preservation of cultural heritage. While physical conditions of objects will change over time, imaging serves as a way to document and represent heritage in a moment in time.</p>
+								<p>In addition to preservation and conservation related concerns, imaging can also serve to enhance research and study of cultural heritage.</p>
+							</div>
 						</div>
-						
 					</div>
+				</div>
+				<button class="carousel-btn prev" aria-label="Previous slide">
+					<i class="fa fa-chevron-left"></i>
+				</button>
+				<button class="carousel-btn next" aria-label="Next slide">
+					<i class="fa fa-chevron-right"></i>
+				</button>
+				<div class="carousel-indicators">
+					<button class="indicator active" data-slide="0"></button>
+					<button class="indicator" data-slide="1"></button>
+					<button class="indicator" data-slide="2"></button>
 				</div>
 			</div>
 <!--=====================Content======================-->
@@ -360,7 +323,7 @@
 							<a href="http://www.twitter.com/govinhood" class="fa fa-twitter" target="_blank" rel="noopener noreferrer" aria-label="Follow on Twitter"> </a>
 							<a href="http://www.facebook.com/govinhood" class="fa fa-facebook" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"> </a>
 							<a href="https://github.com/govinhood" class="fa fa-github" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub"> </a>
-							<a href="http://www.instagram.com/swavimani" class="fa fa-pinterest" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"></a>
+							<a href="http://www.instagram.com/swavimani" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"></a>
 						</div>
 						<div class="copy"> 
 							<span class="brand">govinhood</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
@@ -373,4 +336,82 @@
 			</div>
 		</footer>
 	</body>
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="js/jquery.equalheights.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="js/tmStickUp.js"></script>
+	<script src="js/jquery.ui.totop.js"></script>
+	<script src="js/touchTouch.jquery.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script>
+	jQuery(document).ready(function($){
+		// Custom Carousel
+		let currentSlide = 0;
+		const slides = $('.carousel-slide');
+		const indicators = $('.indicator');
+		const totalSlides = slides.length;
+		
+		function showSlide(index) {
+			slides.removeClass('active');
+			indicators.removeClass('active');
+			
+			if (index >= totalSlides) currentSlide = 0;
+			else if (index < 0) currentSlide = totalSlides - 1;
+			else currentSlide = index;
+			
+			$(slides[currentSlide]).addClass('active');
+			$(indicators[currentSlide]).addClass('active');
+		}
+		
+		function nextSlide() {
+			showSlide(currentSlide + 1);
+		}
+		
+		function prevSlide() {
+			showSlide(currentSlide - 1);
+		}
+		
+		// Button clicks
+		$('.carousel-btn.next').on('click', nextSlide);
+		$('.carousel-btn.prev').on('click', prevSlide);
+		
+		// Indicator clicks
+		$('.indicator').on('click', function() {
+			const slideIndex = parseInt($(this).data('slide'));
+			showSlide(slideIndex);
+		});
+		
+		// Auto advance every 5 seconds
+		let autoSlide = setInterval(nextSlide, 5000);
+		
+		// Pause on hover
+		$('.hero-carousel').hover(
+			function() { clearInterval(autoSlide); },
+			function() { autoSlide = setInterval(nextSlide, 5000); }
+		);
+		
+		// Keyboard navigation
+		$(document).on('keydown', function(e) {
+			if (e.key === 'ArrowLeft') prevSlide();
+			if (e.key === 'ArrowRight') nextSlide();
+		});
+		
+		// Initialize Owl Carousel
+		$("#owl").owlCarousel({
+			items : 7,
+			itemsDesktop : [995,5],
+			itemsDesktopSmall : [767, 3],
+			itemsTablet: [700, 3],
+			itemsMobile : [479, 2],
+			navigation : true,
+		});
+		
+		// Other plugins
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		$('#stuck_container').tmStickUp({});
+		$('.gallery a.gal_item').touchTouch();
+	});
+	</script>
 </html>
