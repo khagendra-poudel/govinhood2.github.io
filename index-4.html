@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>govinhood- Contacts</title>
+		<title>govinhood - Contact | Get in Touch</title>
 		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Contact Govinda Sharma for photography services, collaborations, or inquiries. Based in Khajura, Nepal.">
+		<meta name="keywords" content="contact photographer, hire photographer, photography services, Nepal photography">
+		<meta name="author" content="Govinda Sharma">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="css/stuck.css">
-		<link rel="stylesheet" href="css/form.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script src="js/theme.js" defer></script>
 		<script src="js/jquery.js"></script>
-		<script src="js/jquery-migrate-1.1.1.js"></script>
 		<script src="js/script.js"></script>
-		<script src="js/superfish.js"></script>
-		<script src="js/jquery.equalheights.js"></script>
-		<script src="js/jquery.mobilemenu.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/tmStickUp.js"></script>
-		<script src="js/jquery.ui.totop.js"></script>
-		<script src="js/TMForm.js"></script>
-		<script src="js/sForm.js"></script>
+		<script src="js/superfish.js" defer></script>
+		<script src="js/jquery.equalheights.js" defer></script>
+		<script src="js/jquery.mobilemenu.js" defer></script>
+		<script src="js/jquery.easing.1.3.js" defer></script>
+		<script src="js/tmStickUp.js" defer></script>
+		<script src="js/jquery.ui.totop.js" defer></script>
 		<script>
 			$(document).ready(function(){
 			$().UItoTop({ easingType: 'easeOutQuart' });
@@ -27,21 +29,8 @@
 		});
 		</script>
 		
-		
-
-		<!--[if lt IE 8]>
-		<div style=' clear: both; text-align:center; position: relative;'>
-			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing  experience, upgrade for free today." />
-			</a>
-		</div>
-		<![endif]-->
-		<!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<link rel="stylesheet" media="screen" href="css/ie.css">
-		<![endif]-->
 	</head>
-	<body class="" id="top">
+	<body class="page4" id="top">
 <!--==============================header=================================-->
 		<header>
 			<div id="stuck_container">
@@ -50,17 +39,18 @@
 						<div class="grid_12">
 							<h1>
 								<a href="index.html">
-									<img src="images/logo.png" alt="Your Happy Family">
+									<img src="images/logo.png" alt="Govinhood Logo">
 								</a>
 							</h1>
 							<div class="menu_block ">
-								<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<nav class="horizontal-nav full-width horizontalNav-notprocessed" aria-label="Main navigation">
 									<ul class="sf-menu">
 										<li><a href="index.html">Home</a></li>
 										<li><a href="index-1.html">Photography</a></li>
 										<li><a href="index-2.html">About me</a></li>
 										<li><a href="index-3.html">Blog</a></li>
 										<li class="current"><a href="index-4.html">Contacts</a></li>
+										<li><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode"><span class="fa fa-moon-o" aria-hidden="true"></span><span class="label">Dark</span></button></li>
 									</ul>
 								</nav>
 								<div class="clear"></div>
@@ -70,10 +60,21 @@
 				</div>
 			</div>
 		</header>
-		<div class="main">
+			<div class="main">
+	<!--=====================Hero======================-->
+				<section class="page-hero contact-hero">
+					<div class="container">
+						<div class="row">
+							<div class="grid_12">
+								<h2>Get in Touch</h2>
+								<p>Have a project in mind, need a quote, or just want to say hello? Drop me a line and I’ll get back to you soon.</p>
+							</div>
+						</div>
+					</div>
+				</section>
 <!--=====================Content======================-->
 			<section class="content">
-				<div class="container"><div class="ic">Govinhood</div>
+				<div class="container">
 					<div class="row">
 						<div class="grid_12">
 							<div class="map">
@@ -83,51 +84,57 @@
 							</div>
 						</div>
 						<div class="clear"></div>
-						<div class="grid_5">
-							<h3>Contact Info</h3>
-							<p>24/7 support is on for all <span class="color1"><a href="http://www.govinhood.com/website-templates.php" rel="nofollow">....</a></span></p>
-							<p>Need help in customization? Ask guys from <span class="color1"><a href="http://www.govinhood.com/" rel="nofollow">govinhood</a></span>.</p>
-							Govinhood Inc. <br>
-							9870 St. Samjhana tol,<br>
-							Khajura, NPJ .<br>
-							Telephone: +977xxxxxxxxxx<br>
-							FAX: +977xxxxxxx<br>
-							E-mail: <a href="#">govinhood@gmail.com</a>
-						</div>
-						<div class="grid_6 preffix_1">
+						<div class="grid_12 contact-block contact-form-block">
 							<h3>Contact Form</h3>
-							<form id="form">
-								<div class="success_wrapper">
-									<div class="success-message">Contact form submitted</div>
-								</div>
-								<label class="name">
-									<input type="text" placeholder="Name:" data-constraints="@Required @JustLetters" />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid name.</span>
-								</label>
-								<label class="email">
-									<input type="text" placeholder="E-mail:" data-constraints="@Required @Email" />
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid email.</span>
-								</label>
-								<label class="phone">
-									<input type="text" placeholder="Phone:" data-constraints="@Required @JustNumbers"/>
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*This is not a valid phone.</span>
-								</label>
-								<label class="message">
-									<textarea placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
-									<span class="empty-message">*This field is required.</span>
-									<span class="error-message">*The message is too short.</span>
-								</label>
-								<div>
-									<div class="clear"></div>
-									<div class="btns">
-										<a href="#" data-type="reset" class="btn bt__2">Clear</a>
-										<a href="#" data-type="submit" class="btn bt__2">Submit</a>
+							<form id="contact-form" class="contact-form" novalidate>
+								<div class="cf-row cf-top">
+									<div class="cf-field">
+										<label for="cf-name">Name</label>
+										<input id="cf-name" name="name" type="text" autocomplete="name" required aria-required="true" placeholder="Your name">
+										<span class="cf-error" data-for="name">Please enter a valid name.</span>
+									</div>
+									<div class="cf-field">
+										<label for="cf-email">Email</label>
+										<input id="cf-email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@example.com">
+										<span class="cf-error" data-for="email">Enter a valid email address.</span>
+									</div>
+									<div class="cf-field">
+										<label for="cf-phone">Phone</label>
+										<input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional" pattern="[0-9()+\-\s]{7,}" aria-describedby="cf-phone-note">
+										<small id="cf-phone-note" class="cf-note">Digits, spaces, +, - allowed</small>
 									</div>
 								</div>
+								<div class="cf-row">
+									<div class="cf-field">
+										<label for="cf-subject">Subject</label>
+										<input id="cf-subject" name="subject" type="text" placeholder="Project, inquiry, or greeting" required aria-required="true">
+										<span class="cf-error" data-for="subject">Subject required.</span>
+									</div>
+								</div>
+								<div class="cf-row">
+									<div class="cf-field">
+										<label for="cf-message">Message</label>
+										<textarea id="cf-message" name="message" rows="7" minlength="20" placeholder="Tell me about your idea..." required aria-required="true"></textarea>
+										<span class="cf-error" data-for="message">Minimum 20 characters.</span>
+									</div>
+								</div>
+								<div class="cf-actions">
+									<button type="reset" class="cf-btn cf-secondary">Clear</button>
+									<button type="submit" class="cf-btn cf-primary">Send Message</button>
+								</div>
 							</form>
+						</div>
+						<div class="clear"></div>
+						<div class="grid_12 contact-block contact-info-block">
+							<h3>Contact Info</h3>
+							<address>
+								<p>Reach me directly using the details below. I aim to respond within 24 hours.</p>
+								<strong>Govinda Sharma</strong><br>
+								Samjhana Tol,<br>
+								Khajura, Nepal<br>
+								Phone: <a href="tel:+977XXXXXXXXXX">+977 XXXXXXXX</a><br>
+								Email: <a href="mailto:govinhood@gmail.com">govinhood@gmail.com</a>
+							</address>
 						</div>
 					</div>
 				</div>
@@ -138,26 +145,28 @@
 					<div class="row">
 						<div class="grid_5">
 							<div class="bot_title">
-								<span class="fa fa-envelope-o"></span><marquee>
-								Subscribe to My Newsletter
-								</marquee>
+								<span class="fa fa-envelope-o"></span>
+								<span>Subscribe to My Newsletter</span>
 							</div>
+							<p style="margin-top: 15px; font-size: 16px; opacity: 0.95; position: relative; z-index: 1;">
+								Get exclusive photography tips, behind-the-scenes content, and updates delivered to your inbox.
+							</p>
 						</div>
 						<div class="grid_7">
 							<form id="newsletter">
 								<div class="row">
 									<div class="grid_4">
 										<div class="rel">
-											<div class="success">Your subscrsibe request has been sent!</div>
+											<div class="success" style="display: none;">Your subscribe request has been sent!</div>
 											<label class="email">
-												<input type="email" value="Your Email Address Here" >
-												<span class="error">*This is not a valid email address.</span>
+												<input type="email" placeholder="Enter your email address" >
+												<span class="error" style="display: none;">*This is not a valid email address.</span>
 												<span class="clear"></span>
 											</label>
 										</div>
 									</div>
-									<div class="grid_3">
-										<a href="#" class="btn bt__2" data-type="submit">Submit</a>
+									<div class="grid_2">
+										<a href="#" class="btn bt__2" data-type="submit">Subscribe</a>
 									</div>
 								</div>
 							</form>
@@ -174,8 +183,8 @@
 						<div class="footer_socials">
 							<a href="http://www.twitter.com/govinhood" class="fa fa-twitter" target="_blank"> </a>
 							<a href="http://www.facebook.com/govinhood" class="fa fa-facebook" target="_blank"> </a>
-							<a href="http://www.googleplus.com/govinhood" class="fa fa-google-plus" target="_blank"> </a>
-							<a href="http://www.instagram.com/swavimani" class="fa fa-pinterest" target="_blank"></a>
+							<a href="https://github.com/govinhood" class="fa fa-github" target="_blank"> </a>
+							<a href="http://www.instagram.com/swavimani" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"></a>
 						</div>
 						<div class="copy">
 							<span class="brand">govinhood</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>

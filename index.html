@@ -1,77 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>govinhood- Home</title>
+		<title>govinhood - Home | Professional Photography Portfolio</title>
 		<meta charset="utf-8">
 		<meta name="format-detection" content="telephone=no">
+		<meta name="description" content="Govinda Sharma - Professional photographer specializing in nature, street, heritage, wildlife, portrait, and night photography. Based in Kathmandu, Nepal.">
+		<meta name="keywords" content="photography, photographer, Govinda Sharma, govinhood, Nepal, Kathmandu, nature photography, wildlife photography, portrait photography, night photography">
+		<meta name="author" content="Govinda Sharma">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://govinhood.github.io/">
+		<meta property="og:title" content="govinhood - Professional Photography Portfolio">
+		<meta property="og:description" content="Govinda Sharma - Professional photographer specializing in nature, street, heritage, wildlife, portrait, and night photography.">
+		<meta property="og:image" content="https://govinhood.github.io/images/logo.png">
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://govinhood.github.io/">
+		<meta property="twitter:title" content="govinhood - Professional Photography Portfolio">
+		<meta property="twitter:description" content="Govinda Sharma - Professional photographer specializing in nature, street, heritage, wildlife, portrait, and night photography.">
+		<meta property="twitter:image" content="https://govinhood.github.io/images/logo.png">
+		
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="css/stuck.css">
 		<link rel="stylesheet" href="css/owl.carousel.css">
-		<link rel="stylesheet" href="css/form.css">
 		<link rel="stylesheet" href="css/touchTouch.css">
-		<link rel="stylesheet" href="css/camera.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<link rel="stylesheet" href="css/style.css">
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery-migrate-1.1.1.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/superfish.js"></script>
-		<script src="js/jquery.equalheights.js"></script>
-		<script src="js/jquery.mobilemenu.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/tmStickUp.js"></script>
-		<script src="js/jquery.ui.totop.js"></script>
-		<script src="js/touchTouch.jquery.js"></script>
-		<script src="js/owl.carousel.js"></script>
-		<script src="js/sForm.js"></script>
-		<script src="js/camera.js"></script>
-		<!--[if (gt IE 9)|!(IE)]><!-->
-		<script src="js/jquery.mobile.customized.min.js"></script>
-		<!--<![endif]-->
-		<script>
-		$(document).ready(function(){
-			jQuery('#camera_wrap').camera({
-				loader: false,
-				pagination: false ,
-				minHeight: '200',
-				thumbnails: false,
-				height: '39,0625%',
-				caption: true,
-				navigation: true,
-				fx: 'mosaic'
-			});
-			var owl = $("#owl");
-			owl.owlCarousel({
-				items : 7, //10 items above 1000px browser width
-				itemsDesktop : [995,5], //5 items between 1000px and 901px
-				itemsDesktopSmall : [767, 3], // betweem 900px and 601px
-				itemsTablet: [700, 3], //2 items between 600 and 0
-				itemsMobile : [479, 2], // itemsMobile disabled - inherit from itemsTablet option
-				navigation : true,
-			});
-			$().UItoTop({ easingType: 'easeOutQuart' });
-			$('#stuck_container').tmStickUp({});
-			$('.gallery a.gal_item').touchTouch();
-		});
-		</script>
-
-		<div style=' clear: both; text-align:center; position: relative;'>
-		Use latest version of Google Chrome for faster and better browsing experience. 
-		<a href="https://www.google.com/chrome/browser/desktop" target="_blank"> <u> Click Here! </u></a>To Get Google Chrome.
-		</div>
-
-		<!--[if lt IE 8]>
-		<div style=' clear: both; text-align:center; position: relative;'>
-			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-				<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-			</a>
-		</div>
-		<![endif]-->
-		<!--[if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<link rel="stylesheet" media="screen" href="css/ie.css">
-		<![endif]-->
-		
+		<script src="js/theme.js" defer></script>
 	</head>
 	<body class="page1" id="top">
 <!--==============================header=================================-->
@@ -81,18 +40,19 @@
 					<div class="row">
 						<div class="grid_12">
 							<h1>
-								<a href="index.html">
-									<img src="images/logo.png" alt="Your Happy Family" >
+								<a href="index.html" aria-label="Govinhood Photography Home">
+									<img src="images/logo.png" alt="Govinhood Photography Logo" >
 								</a>
 							</h1>
 							<div class="menu_block">
-								<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<nav class="horizontal-nav full-width horizontalNav-notprocessed" aria-label="Main navigation">
 									<ul class="sf-menu">
 										<li class="current"><a href="index.html">Home</a></li>
 										<li><a href="index-1.html">Photography</a></li>
 										<li><a href="index-2.html">About me</a></li>
 										<li><a href="index-3.html">Blog</a></li>
 										<li><a href="index-4.html">Contacts</a></li>
+										<li><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode"><span class="fa fa-moon-o" aria-hidden="true"></span><span class="label">Dark</span></button></li>
 									</ul>
 								</nav>
 								<div class="clear"></div>
@@ -103,33 +63,49 @@
 			</div>
 		</header>
 		<div class="main">
-			<div class="slider_wrapper">
-				<div id="camera_wrap" class="">
-					<div data-src="images/img/img(12)-001.jpg">
-						<div class="caption fadeIn">
-							<div class="title">Nature</div>
-							<p>Nature photography is a widwe range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures.</p>
-							<p>Nature phorography tends to put a stronger emphasis on the aesthetic value of the photo than other photography genres, such as photojournalism  and documentry photography.</p>
-							<a href="#">Learn More</a>
+			<div class="hero-carousel">
+				<div class="carousel-container">
+					<div class="carousel-slide active">
+						<img src="images/img/img(12)-001.jpg" alt="Nature Photography">
+						<div class="carousel-caption">
+							<div class="caption-content">
+								<h2>Nature</h2>
+								<p>Nature photography is a wide range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures.</p>
+								<p>Nature photography tends to put a stronger emphasis on the aesthetic value of the photo than other photography genres, such as photojournalism and documentary photography.</p>
+							</div>
 						</div>
 					</div>
-					<div data-src="images/img/img(57).jpg">
-						<div class="caption fadeIn">
-							<div class="title">Street</div>
-							<p>Street photography sometimes called as candid photography, is photography conducted for art or enquiry that features unmediated chance encounters and random incidents within public places.</p>
-							<p>Although there is difference between street and candid photography,street photography does not necessitate the presence of a street or even the urban environment. Though people usually feature directly, street photography might be absent of people and can be of an object or environment.</p>
-							<a href="#">Learn More</a>
+					<div class="carousel-slide">
+						<img src="images/img/img(57).jpg" alt="Street Photography">
+						<div class="carousel-caption">
+							<div class="caption-content">
+								<h2>Street</h2>
+								<p>Street photography, sometimes called candid photography, is photography conducted for art or enquiry that features unmediated chance encounters and random incidents within public places.</p>
+								<p>Although there is a difference between street and candid photography, street photography does not necessitate the presence of a street or even the urban environment.</p>
+							</div>
 						</div>
 					</div>
-					<div data-src="images/img/img(4)-001.jpg">
-						<div class="caption fadeIn">
-							<div class="title">Heritage</div>
-							<p>The photography of cultural heritage is a necessary part of long term preservation of cultural heritage. While physical conditions of objects will change over time, imaging serves as a way to document and represent heritage in a moment in time of the lige of the item. </p>
-							<p>In addition to preservation and conservation related concerns, imaging can also serve to enhance research and study of cultural heritage.</p>
-							<a href="#">Learn More</a>
+					<div class="carousel-slide">
+						<img src="images/img/img(4)-001.jpg" alt="Heritage Photography">
+						<div class="carousel-caption">
+							<div class="caption-content">
+								<h2>Heritage</h2>
+								<p>The photography of cultural heritage is a necessary part of long-term preservation of cultural heritage. While physical conditions of objects will change over time, imaging serves as a way to document and represent heritage in a moment in time.</p>
+								<p>In addition to preservation and conservation related concerns, imaging can also serve to enhance research and study of cultural heritage.</p>
+							</div>
 						</div>
-						
 					</div>
+				</div>
+				<button class="carousel-btn prev" aria-label="Previous slide">
+					<i class="fa fa-chevron-left"></i>
+				</button>
+				<button class="carousel-btn next" aria-label="Next slide">
+					<i class="fa fa-chevron-right"></i>
+				</button>
+				<div class="carousel-indicators">
+					<button class="indicator active" data-slide="0"></button>
+					<button class="indicator" data-slide="1"></button>
+					<button class="indicator" data-slide="2"></button>
 				</div>
 			</div>
 <!--=====================Content======================-->
@@ -138,8 +114,8 @@
 					<div class="row">
 						<div class="grid_12"> 
 							<div class="rel">
-								<p><marquee > <h5> <b>
-								Hi! I’m Govinda Sharma. Photography is a passion of mine. Let me use my talent & professionalism to capture the precious moments of your life.</b></h4></marquee>
+								<p class="scroll-text-static">
+								<h5><b>Hi! I'm Govinda Sharma. Photography is a passion of mine. Let me use my talent & professionalism to capture the precious moments of your life.</b></h5>
 								</p>
 								 <!-- <a href="#" class="btn bt__2">Hire Me</a> -->
 							</div>
@@ -156,63 +132,63 @@
 								<div class="row">
 									<div class="grid_4">
 										<a href="images/img/img(15).jpg" class="gal_item">
-											<img src="images/thumb/c (14).jpg" alt="">
+											<img src="images/thumb/c (14).jpg" alt="People Photography" loading="lazy">
 											<div class="gal_caption">People</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/IMG_6299.JPG" class="gal_item">
-											<img src="images/img/IMG_6299-001.JPG" alt="">
+											<img src="images/img/IMG_6299-001.JPG" alt="Night Photography" loading="lazy">
 											<div class="gal_caption">Night</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/img(19).jpg" class="gal_item">
-											<img src="images/thumb/c (18).jpg" alt="">
+											<img src="images/thumb/c (18).jpg" alt="Wedding Photography" loading="lazy">
 											<div class="gal_caption">Wedding</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/img(24).jpg" class="gal_item">
-											<img src="images/thumb/c (23).jpg" alt="">
+											<img src="images/thumb/c (23).jpg" alt="Heritage Photography" loading="lazy">
 											<div class="gal_caption">Heritage</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/img(16).jpg" class="gal_item">
-											<img src="images/thumb/c (15).jpg" alt="">
+											<img src="images/thumb/c (15).jpg" alt="Birds Photography" loading="lazy">
 											<div class="gal_caption">Birds</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/img(46).jpg" class="gal_item">
-											<img src="images/thumb/c (45).jpg" alt="">
+											<img src="images/thumb/c (45).jpg" alt="Nature Photography" loading="lazy">
 											<div class="gal_caption">Nature</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/img(1223).jpg" class="gal_item">
-											<img src="images/thumb/c (1223).jpg" alt="">
+											<img src="images/thumb/c (1223).jpg" alt="Candid Photography" loading="lazy">
 											<div class="gal_caption">Candid</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/moon.JPG" class="gal_item">
-											<img src="images/img/moon.jpg" alt="">
+											<img src="images/img/moon.JPG" alt="Moon Photography" loading="lazy">
 											<div class="gal_caption">Moon</div>
 											<span class="gal_magnify"></span>
 										</a>
 									</div>
 									<div class="grid_4">
 										<a href="images/img/img(43).jpg" class="gal_item">
-											<img src="images/thumb/c (42).jpg" alt="">
+											<img src="images/thumb/c (42).jpg" alt="Mountain Photography" loading="lazy">
 											<div class="gal_caption">Mountain</div>
 											<span class="gal_magnify"></span>
 										</a>
@@ -220,7 +196,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="clear"></div>
 						<div class="grid_4">
 							<h3 class="mb__0">Equipment</h3>
 							<div class="block2">
@@ -285,20 +260,20 @@
 					</div>
 				</div>
 				<div id="owl">
-					<div class="item"><img src="images/thumb/c (1).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (2).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (7).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (9).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (13).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (20).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (21).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (28).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (37).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (43).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (44).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (46).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (50).jpg" alt=""></div>
-					<div class="item"><img src="images/thumb/c (55).jpg" alt=""></div>
+					<div class="item"><img src="images/thumb/c (1).jpg" alt="Photography Sample 1" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (2).jpg" alt="Photography Sample 2" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (7).jpg" alt="Photography Sample 3" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (9).jpg" alt="Photography Sample 4" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (13).jpg" alt="Photography Sample 5" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (20).jpg" alt="Photography Sample 6" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (21).jpg" alt="Photography Sample 7" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (28).jpg" alt="Photography Sample 8" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (37).jpg" alt="Photography Sample 9" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (43).jpg" alt="Photography Sample 10" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (44).jpg" alt="Photography Sample 11" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (46).jpg" alt="Photography Sample 12" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (50).jpg" alt="Photography Sample 13" loading="lazy"></div>
+					<div class="item"><img src="images/thumb/c (55).jpg" alt="Photography Sample 14" loading="lazy"></div>
 
 				</div>
 			</section>
@@ -308,27 +283,28 @@
 					<div class="row">
 						<div class="grid_5">
 							<div class="bot_title">
-								<span class="fa fa-envelope-o"></span> 
-								<marquee>
-								Subscribe to My Newsletter
-								</marquee>
+								<span class="fa fa-envelope-o"></span>
+								<span>Subscribe to My Newsletter</span>
 							</div>
+							<p style="margin-top: 15px; font-size: 16px; opacity: 0.95; position: relative; z-index: 1;">
+								Get exclusive photography tips, behind-the-scenes content, and updates delivered to your inbox.
+							</p>
 						</div>
 						<div class="grid_7">
 							<form id="newsletter">
 								<div class="row">
 									<div class="grid_4">
 										<div class="rel">
-											<div class="success">Your subscrsibe request has been sent!</div>
+											<div class="success" style="display: none;">Your subscribe request has been sent!</div>
 											<label class="email">
-												<input type="email" value="Enter Your Email Address Here" >
-												<span class="error">*This is not a valid email address.</span>
+												<input type="email" placeholder="Enter your email address" >
+												<span class="error" style="display: none;">*This is not a valid email address.</span>
 												<span class="clear"></span>
 											</label>
 										</div>
 									</div>
 									<div class="grid_2">
-										<a href="#" class="btn bt__2" data-type="submit">Submit</a>
+										<a href="#" class="btn bt__2" data-type="submit">Subscribe</a>
 									</div>
 								</div>
 							</form>
@@ -343,10 +319,10 @@
 				<div class="row">
 					<div class="grid_12">
 						<div class="footer_socials">
-							<a href="http://www.twitter.com/govinhood" class="fa fa-twitter" target="_blank"> </a>
-							<a href="http://www.facebook.com/govinhood" class="fa fa-facebook" target="_blank"> </a>
-							<a href="http://www.googleplus.com/govinhood" class="fa fa-google-plus" target="_blank"> </a>
-							<a href="http://www.instagram.com/swavimani" class="fa fa-pinterest" target="_blank"></a>
+							<a href="http://www.twitter.com/govinhood" class="fa fa-twitter" target="_blank" rel="noopener noreferrer" aria-label="Follow on Twitter"> </a>
+							<a href="http://www.facebook.com/govinhood" class="fa fa-facebook" target="_blank" rel="noopener noreferrer" aria-label="Follow on Facebook"> </a>
+							<a href="https://github.com/govinhood" class="fa fa-github" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub"> </a>
+							<a href="http://www.instagram.com/swavimani" class="fa fa-instagram" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram"></a>
 						</div>
 						<div class="copy"> 
 							<span class="brand">govinhood</span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a>
@@ -359,4 +335,82 @@
 			</div>
 		</footer>
 	</body>
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/superfish.js"></script>
+	<script src="js/jquery.equalheights.js"></script>
+	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="js/tmStickUp.js"></script>
+	<script src="js/jquery.ui.totop.js"></script>
+	<script src="js/touchTouch.jquery.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script>
+	jQuery(document).ready(function($){
+		// Custom Carousel
+		let currentSlide = 0;
+		const slides = $('.carousel-slide');
+		const indicators = $('.indicator');
+		const totalSlides = slides.length;
+		
+		function showSlide(index) {
+			slides.removeClass('active');
+			indicators.removeClass('active');
+			
+			if (index >= totalSlides) currentSlide = 0;
+			else if (index < 0) currentSlide = totalSlides - 1;
+			else currentSlide = index;
+			
+			$(slides[currentSlide]).addClass('active');
+			$(indicators[currentSlide]).addClass('active');
+		}
+		
+		function nextSlide() {
+			showSlide(currentSlide + 1);
+		}
+		
+		function prevSlide() {
+			showSlide(currentSlide - 1);
+		}
+		
+		// Button clicks
+		$('.carousel-btn.next').on('click', nextSlide);
+		$('.carousel-btn.prev').on('click', prevSlide);
+		
+		// Indicator clicks
+		$('.indicator').on('click', function() {
+			const slideIndex = parseInt($(this).data('slide'));
+			showSlide(slideIndex);
+		});
+		
+		// Auto advance every 5 seconds
+		let autoSlide = setInterval(nextSlide, 5000);
+		
+		// Pause on hover
+		$('.hero-carousel').hover(
+			function() { clearInterval(autoSlide); },
+			function() { autoSlide = setInterval(nextSlide, 5000); }
+		);
+		
+		// Keyboard navigation
+		$(document).on('keydown', function(e) {
+			if (e.key === 'ArrowLeft') prevSlide();
+			if (e.key === 'ArrowRight') nextSlide();
+		});
+		
+		// Initialize Owl Carousel
+		$("#owl").owlCarousel({
+			items : 7,
+			itemsDesktop : [995,5],
+			itemsDesktopSmall : [767, 3],
+			itemsTablet: [700, 3],
+			itemsMobile : [479, 2],
+			navigation : true,
+		});
+		
+		// Other plugins
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		$('#stuck_container').tmStickUp({});
+		$('.gallery a.gal_item').touchTouch();
+	});
+	</script>
 </html>
