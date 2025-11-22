@@ -5,6 +5,55 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===================================
+    // HERO SLIDESHOW
+    // ===================================
+    
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroPrev = document.querySelector('.hero-prev');
+    const heroNext = document.querySelector('.hero-next');
+    let currentHeroSlide = 0;
+    let heroInterval;
+
+    function showHeroSlide(index) {
+        heroSlides.forEach(slide => slide.classList.remove('active'));
+        heroSlides[index].classList.add('active');
+    }
+
+    function nextHeroSlide() {
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        showHeroSlide(currentHeroSlide);
+    }
+
+    function prevHeroSlide() {
+        currentHeroSlide = (currentHeroSlide - 1 + heroSlides.length) % heroSlides.length;
+        showHeroSlide(currentHeroSlide);
+    }
+
+    // Auto advance hero slides
+    function startHeroSlideshow() {
+        heroInterval = setInterval(nextHeroSlide, 5000);
+    }
+
+    function stopHeroSlideshow() {
+        clearInterval(heroInterval);
+    }
+
+    heroNext.addEventListener('click', function() {
+        nextHeroSlide();
+        stopHeroSlideshow();
+        startHeroSlideshow();
+    });
+
+    heroPrev.addEventListener('click', function() {
+        prevHeroSlide();
+        stopHeroSlideshow();
+        startHeroSlideshow();
+    });
+
+    // Start slideshow
+    startHeroSlideshow();
+    
+    // ===================================
     // NAVIGATION
     // ===================================
     

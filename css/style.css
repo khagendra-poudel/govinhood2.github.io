@@ -137,7 +137,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 0px;
 }
 
 .logo {
@@ -240,16 +240,30 @@ button {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/img/c (66).jpg') center/cover no-repeat;
-    opacity: 0.3;
     z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -258,7 +272,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gradient-overlay);
+    background: rgba(102, 126, 234, 0.5);
     z-index: 1;
 }
 
@@ -268,6 +282,41 @@ button {
     text-align: center;
     color: white;
     padding: 20px;
+}
+
+.hero-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-nav:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-prev {
+    left: 30px;
+}
+
+.hero-next {
+    right: 30px;
+}
+
+.hero-nav i {
+    font-size: 1.2rem;
 }
 
 .hero-title {
@@ -406,31 +455,8 @@ button {
     transition: var(--transition);
 }
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-overlay);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.image-overlay i {
-    font-size: 4rem;
-    color: white;
-}
-
-.about-image:hover .image-overlay {
-    opacity: 1;
-}
-
 .about-image:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .about-text h3 {
@@ -1064,6 +1090,23 @@ button {
 
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+
+    .hero-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-prev {
+        left: 15px;
+    }
+
+    .hero-next {
+        right: 15px;
+    }
+
+    .hero-nav i {
+        font-size: 1rem;
     }
 
     .hero-buttons {
