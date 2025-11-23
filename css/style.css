@@ -152,6 +152,11 @@ button {
 .logo img {
     height: 80px;
     width: auto;
+    filter: brightness(0) saturate(100%);
+}
+
+body.theme-dark .logo img {
+    filter: brightness(0) saturate(100%) invert(1);
 }
 
 .logo i {
